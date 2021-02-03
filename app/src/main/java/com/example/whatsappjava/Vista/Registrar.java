@@ -83,18 +83,16 @@ public class Registrar extends AppCompatActivity {
 
     public void accerder(View v){
         if(aux==0){
-        firebase= FirebaseDatabase.getInstance();
+            firebase= FirebaseDatabase.getInstance();
             obtenerUltimoIdUser();
-            Snackbar.make(v, "Compruebe los campos de email y grupo", Snackbar.LENGTH_SHORT).show();
             newUsuario = new Usuario(idUsuario,tEmail.getText().toString(),tContrasena.getText().toString(),tNick.getText().toString());
             database = firebase.getReference("WhatsappJava").child("Usuarios").child(newUsuario.getID()+"");
             database.setValue(newUsuario);
-            Snackbar.make(v, "Registro", Snackbar.LENGTH_LONG).show();
+            Snackbar.make(v, "Registro Completado", Snackbar.LENGTH_LONG).show();
             onBackPressed();
         }else{
             Snackbar.make(v, "El email ya esta en uso", Snackbar.LENGTH_SHORT).show();
         }
-        Log.d("ENTRAAA", " Auxiliar"+aux);
     }
     public void qEmailRep(){
         aux=0;
