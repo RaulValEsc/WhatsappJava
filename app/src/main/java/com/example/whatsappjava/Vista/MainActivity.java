@@ -7,11 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.example.whatsappjava.Modelos.Usuario;
 import com.example.whatsappjava.R;
-import com.example.whatsappjava.Vista.RecyclerViewMensajes;
-import com.example.whatsappjava.Vista.Registrar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -55,9 +51,7 @@ public class MainActivity extends AppCompatActivity {
                                     EmailIntent = Email.getText().toString();
                                     AccessListener();
                                 }
-
                             }
-
                         }
 
                         @Override
@@ -70,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
 
